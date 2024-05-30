@@ -28,3 +28,9 @@ Pod作成
 $ kubectl apply --filename myapp.yaml --namespace default
 pod/myapp created
 ```
+Pod確認
+```bash
+$ kubectl get pod
+NAME    READY   STATUS    RESTARTS   AGE
+myapp   1/1     Running   0          13m
+```
