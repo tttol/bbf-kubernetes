@@ -43,3 +43,16 @@ $ kubectl exec -it curlpod -- /bin/sh
 ~ $ curl 10.244.0.5:8080
 Hello, world!~ $
 ```
+
+- ポートフォワードして別portでmyappを起動することも可能
+```bash
+kubectl port-forward myapp 8000:8080
+Forwarding from 127.0.0.1:8000 -> 8080
+Forwarding from [::1]:8000 -> 8080
+```
+
+```bash
+# 別ターミナルから実行
+curl localhost:8080
+```
+
