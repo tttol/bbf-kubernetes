@@ -153,8 +153,13 @@ nginx-deployment-696bfc48dd-shsg4   0/1     Terminating         0          73s
 - 青・・・稼働中の旧Pod
 - 灰・・・終了した旧Pod
 - 黄・・・新Pod
-「Podが1個増えては1個減る」を順番に繰り返していることがわかります。
-
+「Podが1個増えては1個減る」を順番に繰り返していることがわかります。  
+  
+削除は以下コマンドで実行する。
+```bash
+kubectl delete -f deployment.yaml 
+```
+※`kubectl delete pod {pod名}`で削除してもDeploymentがすぐ新しいPodを起動するので意味がない。
 
 ## 参考：Rolling UpdateとB/G Deployの違い
 [改めてECSのデプロイ方法を整理する](https://tech.nri-net.com/entry/aws_ecs_deploy)
