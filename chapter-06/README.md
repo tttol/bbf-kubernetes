@@ -26,6 +26,11 @@ Deployment
   - maxSurge
     - デプロイ中に最大何%のPodが増えてもいいか
 
+## Service
+- Podへのアクセスを助ける
+- 参考：[Kubernetes道場 9日目 - Serviceについて](https://cstoku.dev/posts/2018/k8sdojo-09/)
+
+
 ## 実践
 Replicasetの作成
 ```bash
